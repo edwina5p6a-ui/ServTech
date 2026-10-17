@@ -1,0 +1,25 @@
+.slider-container {
+  position: relative;
+  width: 100%;
+  max-width: 800px; /* يمكنك تعديل العرض حسب تصميم موقعك */
+  height: 450px;    /* تعديل الارتفاع حسب الحاجة */
+  margin: 0 auto;
+  overflow: hidden;
+  border-radius: 12px; /* اختياري: حواف مدورة */
+}
+
+.slide {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* لضمان عدم تشوه أبعاد الصورة */
+  opacity: 0;
+  transition: opacity 0.8s ease-in-out; /* تأثير التلاشي الناعم عند التنقل */
+}
+
+/* إظهار الصورة النشطة فقط */
+.slide.active {
+  opacity: 1;
+}

@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+            <link href="https://fonts.googleapis.com/css2?family=Lalezar&display=swap" rel="stylesheet">
+                <link rel="preconnect" href="https://fonts.googleapis.com">
+                    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+                        <link rel="stylesheet" href="stylewepaga.css">
+                            <link href="https://fonts.googleapis.com/css2?family=El+Messiri:wght@400..700&family=Lalezar&display=swap" rel="stylesheet">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ServTech</title>
+
+
+<link rel="stylesheet" href="weppagastayle.css">
+
+</head>
+<body>
+    <nav class="nav-bar">
+
+        <div class="logo">ServTech</div>
+
+        <ul class="nav-menu">
+
+            <li>
+                <a href="#">
+                        Home
+                </a>
+            </li>
+
+            <li class="nav-link-menu">
+                <a href="#">section</a>
+                <ul class="nav-drop-menu">
+
+                    <li>
+                        <a href="#">Help</a>
+                    </li>
+
+                    <li>
+                        <a href="#">about us</a>
+                    </li>
+                   
+                </ul>
+            </li>
+
+            <li class="contact-us">
+                <a href="#">contact us</a>
+            </li>
+
+        </ul>
+      
+    </nav>
+    <h1 id="flogo">Servtech</h1>
+    <div class="img-h2">
+        
+        <h3>
+            أهلاً بك في ServTech (سيرفس تك)
+منصتك الأولى لكل ما يخص عالم الحاسوب وتكنولوجيا المعلومات. نحن هنا لنقدم لك أسهل الحلول وأفضل النصائح لصيانة الحواسيب، تحسين أداء الأجهزة، ومقارنة البرامج، بالإضافة إلى حيل واختصارات ذكية تزيد من إنتاجيتك وتجعل تجربتك التقنية أكثر سلاسة وسرعة.
+
+🎯 هدفتنا: جعل التكنولوجيا بسيطة ومتاحة للجميع.
+        </h3>
+    </div>
+    <div class="cont">
+    <input type="text" name="name" required placeholder="علي احمد علي">
+    <input type="tel" name="phone" required placeholder="07XXXXXXXXX">
+    <input type="text" name="issue" required placeholder="اواجه بطئ في حاسبتي & الخ">
+    
+    <li><label><input type="checkbox" name="problem" value="slow"> بطئ في الحاسوب</label></li>
+    <li><label><input type="checkbox" name="problem" value="settings"> ضبط اعدادات</label></li>
+    <li><label><input type="checkbox" name="problem" value="other"> خدمات اخرى</label></li>
+    
+    <input type="submit" value="إرسال الطلب">
+</div>
+    <div class="slider-container">
+  <!-- قم بتغيير مسارات الصور img1.jpg, img2.jpg .. إلخ إلى مسارات صورك -->
+  <img src="pictsure/adi-goldstein-EUsVwEOsblE-unsplash.jpg" class="slide active" alt="صورة 1">
+  <img src="pictsure/ales-nesetril-Im7lZjxeLhg-unsplash.jpg" class="slide" alt="صورة 2">
+  <img src="pictsure/brecht-corbeel-Y7w6jKBj6Ig-unsplash.jpg" class="slide" alt="صورة 3">
+  <img src="pictsure/jonakoh-_-r5lbaK3fDaM-unsplash.jpg" class="slide" alt="صورة 4">
+  <img src="pictsure/luca-bravo-XJXWbfSo2f0-unsplash.jpg" class="slide" alt="صورة 5">
+  <img src="pictsure/nasa-Q1p7bh3SHj8-unsplash.jpg" class="slide" alt="صورة 6">
+  <img src="pictsure/robynne-o-HOrhCnQsxnQ-unsplash.jpg" class="slide" alt="صورة 7">
+  <img src="pictsure/Gemini_Generated_Image_ch2st6ch2st6ch2s (1).png" class="slide" alt="صورة 8">
+</div>
+
+<script>
+  let currentIndex = 0;
+  const slides = document.querySelectorAll('.slide');
+  const totalSlides = slides.length;
+
+  function showNextSlide() {
+    // إزالة كلاس active من الصورة الحالية
+    slides[currentIndex].classList.remove('active');
+
+    // الانتقال للصورة التالية (والعودة للأولى عند الوصول للنهاية)
+    currentIndex = (currentIndex + 1) % totalSlides;
+
+    // إضافة كلاس active للصورة الجديدة
+    slides[currentIndex].classList.add('active');
+  }
+
+  // تشغيل الدالة كل 3 ثوانٍ (3000 ملي ثانية)
+  setInterval(showNextSlide, 4000);
+</script>
+
+
+</body>
+</html>

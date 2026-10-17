@@ -1,0 +1,180 @@
+html { scroll-behavior: smooth; }
+body{
+    font-size: 20px;
+    background: rgba(1, 44, 109, 0.877);
+    color: rgb(0, 0, 0);
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.img1{
+    border-radius: 20px; /* يمكنك زيادة أو تقليل الرقم حسب رغبتك */
+    align-items: center;
+}
+
+#flogo {
+    display: flex;
+    justify-content: center; /* التوسيط أفقياً */
+    align-items: center;     /* التوسيط عمودياً */
+    font-size: 100px;
+    font-weight: bold;
+    color: #000000;
+    padding: 20px 40;
+}
+
+.nav-bar {
+    background-color: #000000;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 40px;
+    box-shadow: 0 4px 10px rgb(0, 0, 0);
+    border-radius: 40px;
+}
+
+.nav-menu { display: flex; list-style: none; gap: 30px; }
+.nav-menu a {
+    font-size: 18px;
+    color: rgb(243, 241, 239);
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s;
+}
+.nav-menu a:hover { color: #0fb9b1; }
+
+/* القائمة المنسدلة (نسخة مندمجة ومعدلة) */
+.nav-link-menu {
+    position: relative;
+    cursor: pointer;
+    padding-bottom: 20px;
+}
+
+.nav-drop-menu{
+    position: absolute;
+    top: 100%;
+    right: 0;
+    background-color: #000000;
+    min-width: 180px;
+    padding: 10px 0;
+    border-radius: 12px;
+    box-shadow: 0 8px 16px rgb(24, 1, 1);
+    list-style: none;
+    z-index: 1000;
+    
+    /* تأثيرات الاختفاء والظهور */
+    visibility: hidden;
+    opacity: 0;
+    transition: opacity 0.3s ease, visibility 0.3s;
+}
+
+/* التفاعل */
+.nav-link-menu:hover .nav-drop-menu{
+    visibility: visible;
+    opacity: 1;
+    transition-delay: 0.1s;
+}
+
+.nav-drop-menu li a {
+    display: block;
+    padding: 12px 20px;
+    color: rgb(255, 255, 255);
+    text-decoration: none;
+    transition: background 0.3s;
+}
+.nav-drop-menu li a:hover { background-color: #4a2f85; color: #ffffff; }
+
+
+.logo {
+    font-size: 30px;
+    font-weight: bold;
+    color: rgb(7, 11, 233);
+}
+
+/* ==========================================
+   تنسيق نموذج الصيانة / التواصل (.cont)
+   ========================================== */
+
+/* الحاوية الرئيسية للنموذج */
+.cont {
+    max-width: 480px;
+    margin: 50px auto;
+    background-color: #000000; /* خلفية سوداء متناسقة مع شريط الملاحة */
+    padding: 35px 30px;
+    border-radius: 24px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.4);
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    direction: rtl; /* اتجاه الكتابة من اليمين لليسار */
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+/* تنسيق حقول الإدخال (النصوص والأرقام) */
+.cont input[type="text"],
+.cont input[type="number"] {
+    width: 100%;
+    padding: 14px 16px;
+    background-color: #1a1a1a;
+    border: 1px solid #333333;
+    border-radius: 12px;
+    color: #ffffff;
+    font-size: 15px;
+    outline: none;
+    transition: border-color 0.3s, box-shadow 0.3s;
+    box-sizing: border-box;
+}
+
+/* تأثير التحديد عند الضغط على الحقل */
+.cont input[type="text"]:focus,
+.cont input[type="number"]:focus {
+    border-color: #0fb9b1; /* لون تركوازي متناسق مع Hover القائمة */
+    box-shadow: 0 0 8px rgba(15, 185, 177, 0.4);
+}
+
+/* لون النص التوضيحي (Placeholder) */
+.cont input::placeholder {
+    color: #888888;
+    font-size: 14px;
+}
+
+/* تنسيق عناصر الخيارات (Checkboxes) */
+.cont li {
+    list-style: none;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    color: #f3f1ef;
+    font-size: 15px;
+    padding: 6px 4px;
+    cursor: pointer;
+}
+
+/* تكبير وتنسيق مربع الاختيار */
+.cont input[type="checkbox"] {
+    width: 18px;
+    height: 18px;
+    accent-color: #0fb9b1; /* لون المربع عند التفعيل */
+    cursor: pointer;
+}
+
+/* زر الإرسال */
+.cont input[type="submit"] {
+    margin-top: 10px;
+    background-color: #0fb9b1;
+    color: #ffffff;
+    font-size: 16px;
+    font-weight: bold;
+    padding: 14px;
+    border: none;
+    border-radius: 12px;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.2s, box-shadow 0.3s;
+}
+
+.cont input[type="submit"]:hover {
+    background-color: #0b968f;
+    box-shadow: 0 4px 12px rgba(15, 185, 177, 0.3);
+}
+
+.cont input[type="submit"]:active {
+    transform: scale(0.98);
+}
